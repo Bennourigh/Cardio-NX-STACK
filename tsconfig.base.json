@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cardio-life/clients": ["clients/src/index.ts"],
+      "@cardio-life/custom-button": ["lib/shared/custom-button/src/index.ts"],
+      "@cardio-life/devices": ["devices/src/index.ts"],
+      "@cardio-life/jobs": ["jobs/src/index.ts"],
+      "@cardio-life/ui": ["ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

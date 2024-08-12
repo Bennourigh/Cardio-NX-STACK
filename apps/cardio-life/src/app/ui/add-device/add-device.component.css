@@ -1,0 +1,17 @@
+.container-mt-5 {
+  margin-top: 40px;
+}
+
+.p-2 {
+  padding: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: column;
+}

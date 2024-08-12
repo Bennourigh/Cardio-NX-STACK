@@ -1,0 +1,38 @@
+.container-mt-5 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.p-card-custom {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.p-field {
+  flex: 1;
+  min-width: calc(50% - 16px); /* Ensure inputs are half-width and take up the entire row if space allows */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.p-error {
+  color: red;
+  display: block;
+  margin-top: 0.5rem;
+}

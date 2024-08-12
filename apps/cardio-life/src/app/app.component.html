@@ -1,1 +1,28 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<p-toolbar class="main-toolbar">
+  <div class="p-toolbar-group-left">
+<!--    <img alt="Logo" class="logo" height="58" src="assets/logo.png" width="207">-->
+  </div>
+  <div class="p-toolbar-group-center">
+    <span class="example-spacer"></span>
+  </div>
+  <div class="p-toolbar-group-right">
+    <div class="user-info">
+      <i class="pi pi-user user-icon"></i>
+      <span class="user-greeting">Hello,
+<!--        {{ profiler }}-->
+      </span>
+    </div>
+
+<!--    <p-button label="Logout" icon="pi pi-sign-out" class="p-button-raised p-button-primary nav-button" (click)="logout()"></p-button>-->
+
+<!--    @if (admin) {-->
+      <p-button label="Manager" icon="pi pi-book" class="p-button-raised p-button-primary nav-button" routerLink=""></p-button>
+<!--    }-->
+
+<!--    @if (client && !admin) {-->
+<!--      <p-button label="Client Details" icon="pi pi-id-card" class="p-button-raised p-button-primary nav-button" (click)="userUpdate()"></p-button>-->
+<!--    }-->
+  </div>
+</p-toolbar>
+
+<router-outlet></router-outlet>

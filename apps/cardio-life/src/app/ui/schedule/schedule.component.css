@@ -1,0 +1,30 @@
+.container {
+  margin: 20px;
+}
+
+mat-card {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+mat-header-cell {
+  font-weight: bold;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+mat-card-content {
+  padding-top: 20px;
+}

@@ -1,0 +1,21 @@
+<div class="container">
+  <p-card>
+    <ng-template pTemplate="header">
+      <span class="p-card-title">
+        All-Maintenances
+      </span>
+    </ng-template>
+    <ng-template pTemplate="content">
+      <div id="Calendar-container">
+        <div>
+          <p-button label="Previous" icon="pi pi-angle-left" class="p-button-raised p-button-primary" mwlCalendarPreviousView  [(viewDate)]="viewDate" [view]="view"></p-button>
+          <p-button label="Today" icon="pi pi-calendar" class="p-button-raised p-button-primary" mwlCalendarToday [(viewDate)]="viewDate"></p-button>
+          <p-button label="Next" icon="pi pi-angle-right" class="p-button-raised p-button-primary" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view"></p-button>
+        </div>
+        <div id="cal-date-field">{{ viewDate | calendarDate:(view+'ViewTitle'): 'en' }}</div>
+        <mwl-calendar-month-view  [events]="events" [viewDate]="viewDate"
+                                  [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)">
+        </mwl-calendar-month-view>      </div>
+    </ng-template>
+  </p-card>
+</div>

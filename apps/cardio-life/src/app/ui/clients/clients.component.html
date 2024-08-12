@@ -1,0 +1,49 @@
+<div class="container">
+  <p-card>
+    <ng-template pTemplate="header">
+      <div class="p-card-title">
+        Clients
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="content">
+      <div class="button-container">
+        <p-button label="Add Client" icon="pi pi-plus" class="p-button-raised p-button-primary" routerLink="/admin/add-client"></p-button>
+      </div>
+      <p-table [value]="dataSource" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 20, 30, 100]" [sortMode]="'multiple'">
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="clientName">Client Name <p-sortIcon field="clientName"></p-sortIcon></th>
+            <th pSortableColumn="emailAddress">Email Address <p-sortIcon field="emailAddress"></p-sortIcon></th>
+            <th pSortableColumn="phoneNumber">Phone Number <p-sortIcon field="phoneNumber"></p-sortIcon></th>
+            <th>History</th>
+            <th>Devices</th>
+            <th>Update</th>
+            <th>Payment </th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-element>
+          <tr>
+            <td>{{ element.clientName }}</td>
+            <td>{{ element.emailAddress }}</td>
+            <td>{{ element.phoneNumber }}</td>
+            <td>
+              <p-button label="History" icon="pi pi-history" class="p-button-raised p-button-primary" (click)="toEvents(element)"></p-button>
+            </td>
+            <td>
+              <p-button label="Devices" icon="pi pi-desktop" class="p-button-raised p-button-primary" (click)="toDevices(element)"></p-button>
+              <p-button label="Add Device" icon="pi pi-plus" class="p-button-raised p-button-primary" (click)="addDevice(element)"></p-button>
+            </td>
+            <td>
+              <p-button label="Update" icon="pi pi-pencil" class="p-button-raised p-button-primary" ></p-button>
+            </td>
+            <td>
+              <p-checkbox binary="true" value="true"></p-checkbox>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </ng-template>
+  </p-card>
+</div>

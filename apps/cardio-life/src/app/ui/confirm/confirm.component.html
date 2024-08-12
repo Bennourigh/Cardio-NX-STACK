@@ -1,0 +1,24 @@
+<div class="container-mt-5">
+  <div class="card p-2">
+    <div class="col-6">
+      <div class="row">
+        <form [formGroup]="confirmationForm" (ngSubmit)="save(confirmationForm)">
+          <p-calendar formControlName="datePerformed" showIcon dateFormat="dd/mm/yy" placeholder="DD/MM/YYYY"></p-calendar>
+
+          <div class="p-fluid">
+            <div class="p-field">
+              <label for="batteryLevel">Battery Level</label>
+              <input pInputText type="number" id="batteryLevel" placeholder="1.00" max="1" min="0.00" formControlName="deviceBatteryStatus">
+            </div>
+          </div>
+
+          <p-calendar formControlName="electrodesDlc" showIcon dateFormat="dd/mm/yy" placeholder="DD/MM/YYYY"></p-calendar>
+
+          <div class="button-container">
+            <p-button label="Save" icon="pi pi-save" class="p-button-raised p-button-primary" type="submit"></p-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

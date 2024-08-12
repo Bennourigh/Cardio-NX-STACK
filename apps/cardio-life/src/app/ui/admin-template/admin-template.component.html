@@ -1,0 +1,25 @@
+<div class="container">
+  <p-sidebar [(visible)]="drawerOpened" position="left" [modal]="false" [fullScreen]="false" class="custom-sidebar">
+
+    <div class="p-toolbar-group-left">
+      <img alt="Logo" class="logo" height="58" ngSrc="assets/logo.png" width="207">
+    </div>
+
+    <p-button label="Product Management" icon="pi pi-shopping-cart"
+              class="p-button-raised p-button-primary sidebar-button" routerLink="/admin/sales-management"></p-button>
+    <p-button label="Orders Management" icon="pi pi-list" class="p-button-raised p-button-primary sidebar-button"
+              routerLink="/admin/orders"></p-button>
+    <p-button label="Clients Management" icon="pi pi-users" class="p-button-raised p-button-primary sidebar-button"
+              routerLink="/admin/clients"></p-button>
+    <p-button label="Devices Management" icon="pi pi-desktop" class="p-button-raised p-button-primary sidebar-button"
+              routerLink="/admin/devices"></p-button>
+    <p-button label="Cardio-life Calendar" icon="pi pi-calendar" class="p-button-raised p-button-primary sidebar-button"
+              routerLink="/admin/maintenances"></p-button>
+  </p-sidebar>
+
+  <div class="main-content">
+    <p-button label="Cardio-Life-Management" icon="pi pi-bars" class="p-button-raised p-button-primary"
+              (click)="toggleDrawer()"></p-button>
+    <router-outlet></router-outlet>
+  </div>
+</div>

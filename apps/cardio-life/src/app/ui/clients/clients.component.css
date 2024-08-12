@@ -1,0 +1,30 @@
+.container {
+  margin: 20px;
+}
+
+.mat-card {
+  margin-bottom: 20px;
+}
+
+.mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  margin-top: 10px;
+}
+
+.mat-elevation-z1 {
+  width: 100%;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+}

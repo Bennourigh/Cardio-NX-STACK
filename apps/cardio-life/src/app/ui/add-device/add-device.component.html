@@ -1,0 +1,43 @@
+<div class="container-mt-5">
+  <p-card class="p-2">
+    <div class="col-6">
+      <div class="row">
+        <form [formGroup]="clientForm" (ngSubmit)="saveProduct(clientForm)">
+          <div class="p-field">
+            <label for="clientId">Client Id</label>
+            <input pInputText id="clientId" type="text" placeholder="Client Id" formControlName="clientId">
+          </div>
+
+          <div class="p-field">
+            <label for="deviceSN">Device Serial Number</label>
+            <input pInputText id="deviceSN" type="text" placeholder="Device Serial Number" formControlName="deviceSN">
+          </div>
+
+          <div class="p-field">
+            <label for="type">Type</label>
+            <input pInputText id="type" type="text" placeholder="Type" formControlName="type">
+          </div>
+
+          <div class="p-field">
+            <label for="dateInstallation">Date Installation</label>
+            <p-calendar id="dateInstallation" formControlName="dateInstallation" showIcon dateFormat="mm/dd/yy" placeholder="MM/DD/YYYY"></p-calendar>
+          </div>
+
+          <div class="p-field">
+            <label for="batteryLevel">Battery Level</label>
+            <input pInputText id="batteryLevel" type="number" placeholder="1.00" formControlName="batteryLevel">
+          </div>
+
+          <div class="p-field">
+            <label for="dlc">Date Limit of Consummation</label>
+            <p-calendar id="dlc" formControlName="dlc" showIcon dateFormat="mm/dd/yy" placeholder="MM/DD/YYYY"></p-calendar>
+          </div>
+
+          <div>
+            <p-button label="Save" icon="pi pi-save" class="p-button-raised p-button-primary" type="submit"></p-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
+</div>

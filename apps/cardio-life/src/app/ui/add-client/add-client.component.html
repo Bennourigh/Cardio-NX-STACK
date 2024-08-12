@@ -1,0 +1,47 @@
+  <p-card class="p-2">
+    <div class="col-6">
+      <div class="row">
+        <form [formGroup]="clientForm" (ngSubmit)="saveClient(clientForm)">
+          <div class="p-field">
+            <label for="clientName">Client Name</label>
+            <input pInputText id="clientName" placeholder="Client Name" formControlName="clientName">
+          </div>
+
+          <div class="p-field">
+            <label for="emailAddress">Email Address</label>
+            <input pInputText id="emailAddress" type="email" placeholder="Email Address" formControlName="emailAddress">
+          </div>
+
+
+          <div class="p-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input pInputText id="phoneNumber" type="number" placeholder="00000000" formControlName="phoneNumber">
+          </div>
+
+          <div>
+            <p-button label="Save" icon="pi pi-save" class="p-button-raised p-button-primary" type="submit"></p-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
+
+<!--<div class="p-field">-->
+<!--  <label >Phone Number</label>-->
+<!--  <p-inputMask  mask="(999) 999-9999?999" placeholder="(216) 000-0000?000" formControlName="phoneNumber"></p-inputMask>-->
+<!--  @if (clientForm.get('phoneNumber')?.hasError('required') && clientForm.get('phoneNumber')?.touched) {-->
+<!--    <small class="p-error">Phone Number is required.</small>-->
+<!--  } @else if (clientForm.get('phoneNumber')?.hasError('pattern') && clientForm.get('phoneNumber')?.touched) {-->
+<!--    <small class="p-error">Invalid phone number format.</small>-->
+<!--  }-->
+<!--</div>-->
+
+<!--          <div class="p-field">-->
+<!--            <label for="emailAddress">Email Address</label>-->
+<!--            <input pInputText id="emailAddress" type="email" placeholder="Email Address" formControlName="emailAddress">-->
+<!--            @if (clientForm.get('emailAddress')?.hasError('required') && clientForm.get('emailAddress')?.touched) {-->
+<!--              <small class="p-error">Email Address is required.</small>-->
+<!--            } @else if (clientForm.get('emailAddress')?.hasError('email') && clientForm.get('emailAddress')?.touched) {-->
+<!--              <small class="p-error">Invalid email address format.</small>-->
+<!--            }-->
+<!--          </div>-->

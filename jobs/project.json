@@ -1,0 +1,16 @@
+{
+  "name": "jobs",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "jobs/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "jobs/jest.config.ts"
+      }
+    }
+  }
+}
